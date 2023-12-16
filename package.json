@@ -14,10 +14,38 @@
   "contributes": {
     "commands": [
       {
-        "command": "typewars.helloWorld",
-        "title": "Hello World"
+        "command": "typewars.startListening",
+        "title": "TypeWars: Start Listening"
+      },
+      {
+        "command": "typewars.stopListening",
+        "title": "TypeWars: Stop Listening"
+      },
+      {
+        "command": "typewars.startGame",
+        "title": "TypeWars: Start Game"
+      },
+      {
+        "command": "typewars.stopGame",
+        "title": "TypeWars: Stop Game"
       }
-    ]
+    ],
+    "configuration": {
+      "properties": {
+          "TypeWars.listenCount": {
+              "type": "integer",
+              "default": 0
+          },
+          "TypeWars.playerXp": {
+              "type": "integer",
+              "default": 0
+          },
+          "TypeWars.listenKeys": {
+              "type": "boolean",
+              "default": true
+          }
+      }
+  }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
